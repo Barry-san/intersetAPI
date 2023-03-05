@@ -29,6 +29,17 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-function callback() {}
 
 targets.forEach((target) => observer.observe(target));
+
+const menu = document.querySelector(".menu");
+const menuToggle = document.querySelector(".menu-toggle");
+
+function handleClick() {
+  const open = menu.getAttribute("aria-expanded");
+  open === "true"
+    ? menu.setAttribute("aria-expanded", "false")
+    : menu.setAttribute("aria-expanded", "true");
+}
+
+menuToggle.addEventListener("click", handleClick);
