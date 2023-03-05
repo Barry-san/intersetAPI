@@ -1,6 +1,5 @@
 const word = document.querySelector(".word");
 const letters = document.querySelector(".word").textContent;
-console.log(letters);
 
 word.textContent = "";
 let trans = 0;
@@ -18,3 +17,18 @@ function spanWrapper(letter) {
   temp.style.animationDelay = `${trans}ms`;
   return temp;
 }
+
+const targets = document.querySelectorAll(".target");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      console.log(entry.target);
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+function callback() {}
+
+targets.forEach((target) => observer.observe(target));

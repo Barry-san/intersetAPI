@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #1e1e1e;
     margin: 0;
 }
@@ -42,7 +42,6 @@ nav {
     display: none;
     gap: 1rem;
     font-family: sans-serif;
-
 }
 
 .navlinks>a {
@@ -115,15 +114,12 @@ nav {
         justify-content: space-around;
     }
 
-
 }
 
 main {
     color: #909090;
     width: min(800px, 100vw, 90%);
     margin-inline: auto;
-    /* padding-inline: 1rem; */
-    /* border: solid white 1px; */
 }
 
 section {
@@ -152,4 +148,17 @@ ul {
         font-size: 3.5rem;
     }
 
+}
+
+.target {
+    /* position: relative; */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all .7s ease-in, opacity .5s linear;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform .7s ease-in, opacity .5s linear;
 }
