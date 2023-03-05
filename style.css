@@ -180,7 +180,6 @@ footer {
     top: 45px;
     right: 0;
     width: min(50%, 200px);
-    /* z-index: -10; */
     justify-content: center;
     gap: 1rem;
     background-color: rgb(30, 30, 30, 0.9);
