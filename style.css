@@ -30,8 +30,10 @@ nav {
     align-items: center;
     padding: 1rem;
     width: 100%;
-    background-color: transparent;
+    background-color: #1e1e1e;
     backdrop-filter: blur(40px);
+    z-index: 10;
+
 }
 
 .navlinks {
